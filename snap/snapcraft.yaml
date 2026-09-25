@@ -30,7 +30,7 @@ parts:
     source: https://github.com/stoefelz/ArcAurora-Cursors/releases/download/release/ArcAurora-cursors.zip
 
     organize:
-      ArcAurora-cursors: share/icons/ArcAurora-cursors
+      usr/share/icons: share/icons
 
     prime:
-      - share/icons/ArcAurora-cursors
+      - share/icons/
