@@ -1,5 +1,6 @@
 name: arcaurora-cursors
 base: bare
+build-base: core26
 license: GPL-3.0
 version: '1.1'
 
