@@ -1,26 +1,36 @@
----
 name: arcaurora-cursors
-version: '1.0'
-base: core22
+build-base: core26
+base: bare
 license: GPL-3.0
+version: '1.1'
+
+platforms:
+  all:
+    build-on: [amd64]
+    build-for: [all]
+
+summary: Arc Aurora Cursors
+description: |
+	This snap contains the Arc Aurora Cursors Theme from  yeyushengfan258 (https://github.com/yeyushengfan258/ArcAurora-Cursors). Arc Aurora Cursors is an x-cursor theme inspired by macOS and based on capitaine-cursors.
+
 grade: stable
 confinement: strict
-summary: Arc Aurora Cursor Theme
-description: |
-  This snap contains the Arc Aurora Cursors Theme from  yeyushengfan258 (https://github.com/yeyushengfan258/ArcAurora-Cursors). Arc Aurora Cursors is an x-cursor theme inspired by macOS and based on capitaine-cursors.
+
 slots:
   icon-themes:
     interface: content
+    content: icon-themes
     source:
       read:
         - $SNAP/share/icons/ArcAurora-cursors
+
 parts:
   cursors:
     plugin: dump
-    source: ./ArcAurora-cursors.zip
-    override-build: |
-      snapcraftctl build
-      mkdir -p $SNAPCRAFT_PART_INSTALL/share/icons
-      mv -f $SNAPCRAFT_PART_INSTALL/ArcAurora-cursors $SNAPCRAFT_PART_INSTALL/share/icons/
-    stage:
+    source: https://github.com/stoefelz/ArcAurora-Cursors/releases/download/release/ArcAurora-cursors.zip
+
+    organize:
+      ArcAurora-cursors: share/icons/ArcAurora-cursors
+
+    prime:
       - share/icons/ArcAurora-cursors
