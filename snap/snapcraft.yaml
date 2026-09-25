@@ -11,7 +11,7 @@ platforms:
 
 summary: Arc Aurora Cursors
 description: |
-	This snap contains the Arc Aurora Cursors Theme from  yeyushengfan258 (https://github.com/yeyushengfan258/ArcAurora-Cursors). Arc Aurora Cursors is an x-cursor theme inspired by macOS and based on capitaine-cursors.
+  This snap contains the Arc Aurora Cursors Theme from  yeyushengfan258 (https://github.com/yeyushengfan258/ArcAurora-Cursors). Arc Aurora Cursors is an x-cursor theme inspired by macOS and based on capitaine-cursors.
 
 grade: stable
 confinement: strict
